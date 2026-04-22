@@ -1,0 +1,45 @@
+name: Backport GitHub Action
+author: step-security
+description: >-
+  Cherry-picks commits from merged pull requests onto one or more
+  target branches, driven by labels on the source PR.
+
+inputs:
+  github_token:
+    description: >-
+      Token with repo scope for opening backport PRs and calling the GitHub API.
+    required: true
+
+  auto_backport_label_prefix:
+    description: >-
+      Prefix used to derive the target branch from a label name.
+      A label "backport-to-staging" with prefix "backport-to-" targets the "staging" branch.
+    required: false
+
+  repo_fork_owner:
+    description: >-
+      GitHub user or organisation that owns the fork where backport branches are created.
+      Falls back to the owner of the current repository when omitted.
+    required: false
+
+  add_original_reviewers:
+    description: >-
+      Carry over the reviewers assigned to the original pull request
+      onto every backport pull request that is created.
+    required: false
+    default: false
+
+  ignore_error_codes:
+    description: >-
+      Comma-separated list of error codes that should not cause the
+      workflow step to fail. Leave empty to treat every error as fatal.
+    required: false
+    default: "merge-conflict-exception,no-branches-exception"
+
+runs:
+  using: 'node24'
+  main: 'dist/index.js'
+
+branding:
+  icon: git-pull-request
+  color: blue

@@ -1,0 +1,31 @@
+{
+  "name": "backport-github-action",
+  "version": "11.0.0",
+  "private": true,
+  "author": "step-security",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/step-security/backport-github-action.git"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "npx ncc build index.ts -o dist",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^3.0.0",
+    "@actions/github": "^9.0.0",
+    "axios": "^1.15.1",
+    "backport": "11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@vercel/ncc": "^0.38.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}
