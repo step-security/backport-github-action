@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run backport
-        uses: step-security/backport-github-action@v1
+        uses: step-security/backport-github-action@v11
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           auto_backport_label_prefix: backport-to-
@@ -85,12 +85,15 @@ Every other error fails the workflow run. To change this behaviour, set `ignore_
 
 ```yaml
 # Fail on all errors including merge conflicts
-- uses: step-security/backport-github-action@v1
+- uses: step-security/backport-github-action@v11
   with:
     github_token: ${{ secrets.GITHUB_TOKEN }}
     auto_backport_label_prefix: backport-to-
     ignore_error_codes: ""
 ```
+
+See the [Backport Tool documentation](https://github.com/sorenlouv/backport/blob/main/docs/config-file-options.md)
+[`BackportErrorCode` in backport-error.ts](https://github.com/sorenlouv/backport/blob/main/src/lib/backport-error.ts)
 
 ## License
 
