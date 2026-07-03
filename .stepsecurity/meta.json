@@ -1,0 +1,18 @@
+{
+   "schema_version": "1",
+   "onboarding_type": "reimplemented",
+   "archived": false,
+   "maintained_action_name": "step-security/backport-github-action",
+   "upstream_full_repo_name": "sorenlouv/backport-github-action",
+   "action_type": "node",
+   "last_release": {
+     "tag_name": "v11.0.0",
+     "created_at": "2026-04-22T11:27:17Z",
+     "published_at": "2026-04-24T00:56:48Z"
+   },
+   "sync": {
+     "ignore_presets": [
+       "defaults_v1"
+     ]
+   }
+ }
