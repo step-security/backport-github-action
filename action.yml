@@ -22,7 +22,7 @@ inputs:
       Falls back to the owner of the current repository when omitted.
     required: false
 
-  add_original_reviewers:
+  copy_source_pr_reviewers:
     description: >-
       Carry over the reviewers assigned to the original pull request
       onto every backport pull request that is created.

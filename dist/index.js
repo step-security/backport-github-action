@@ -79065,7 +79065,7 @@ if (!process.env.VITEST) {
                     required: false,
                 }),
                 forkOwner: _actions_core__WEBPACK_IMPORTED_MODULE_1__/* .getInput */ .V4('repo_fork_owner', { required: false }),
-                includeReviewers: _actions_core__WEBPACK_IMPORTED_MODULE_1__/* .getBooleanInput */ .Vt('add_original_reviewers', {
+                includeReviewers: _actions_core__WEBPACK_IMPORTED_MODULE_1__/* .getBooleanInput */ .Vt('copy_source_pr_reviewers', {
                     required: false,
                 }),
             },
