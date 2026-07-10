@@ -1,6 +1,6 @@
 {
   "name": "backport-github-action",
-  "version": "11.0.0",
+  "version": "12.0.4",
   "private": true,
   "author": "step-security",
   "repository": {

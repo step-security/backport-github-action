@@ -213,7 +213,7 @@ if (!process.env.VITEST) {
           required: false,
         }),
         forkOwner: core.getInput('repo_fork_owner', { required: false }),
-        includeReviewers: core.getBooleanInput('add_original_reviewers', {
+        includeReviewers: core.getBooleanInput('copy_source_pr_reviewers', {
           required: false,
         }),
       },
